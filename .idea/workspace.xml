@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df14b6d4-c49c-4bd0-b848-99f18a9866ff" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/sliver_animated_firestore_list.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firestore_ui.iml" beforeDir="false" afterPath="$PROJECT_DIR$/firestore_ui.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/firestore_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/firestore_list.dart" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -70,8 +65,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1564648245690</updated>
-      <workItem from="1564648247336" duration="979000" />
+      <workItem from="1564648247336" duration="1825000" />
     </task>
+    <task id="LOCAL-00001" summary="feat: sliver_animiated_list + firestore">
+      <created>1564650530463</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1564650530463</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat: sliver_animated_list + firestore">
+      <created>1564650752677</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1564650752677</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -87,5 +97,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: sliver_animiated_list + firestore" />
+    <MESSAGE value="feat: sliver_animated_list + firestore" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: sliver_animated_list + firestore" />
   </component>
 </project>

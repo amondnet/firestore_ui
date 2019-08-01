@@ -137,9 +137,16 @@ class FirestoreList extends ListBase<DocumentSnapshot>
   void _onDocumentAdded(DocumentChange event) {
     try {
       log("Calling _onDocumentAdded for document on index ${event?.newIndex}");
-      final index = event.newIndex >= length ? length : event.newIndex;
-      _snapshots.insert(index, event.document);
-      onDocumentAdded?.call(index, event.document);
+
+      if (_snapshots.any(
+          (snapshot) => snapshot.documentID == event.document.documentID)) {
+        log("Already Inserted Item");
+      } else {
+        final index = event.newIndex >= length ? length : event.newIndex;
+
+        _snapshots.insert(index, event.document);
+        onDocumentAdded?.call(index, event.document);
+      }
     } catch (error) {
       log("Failed on adding item on index ${event?.newIndex}");
     }
