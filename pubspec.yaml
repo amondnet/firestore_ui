@@ -13,7 +13,7 @@ dependencies:
   meta: ^1.1.6
   firebase_core: ^0.4.0+3
   cloud_firestore: ^0.12.2
-
+  sliver_animated_list:
 dev_dependencies:
   flutter_test:
     sdk: flutter
