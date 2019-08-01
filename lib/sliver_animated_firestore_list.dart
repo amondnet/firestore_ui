@@ -1,22 +1,16 @@
 library firestore_ui;
 
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firestore_ui/animated_firestore_list.dart';
 import 'package:firestore_ui/firestore_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:sliver_animated_list/sliver_animated_list.dart';
 
-typedef Widget FirestoreAnimatedListItemBuilder(
-    BuildContext context,
-    DocumentSnapshot snapshot,
-    Animation<double> animation,
-    int index,
-    bool loaded);
-
 /// An AnimatedList widget that is bound to a query
-class FirestoreAnimatedList extends StatefulWidget {
+class FirestoreSliverAnimatedList extends StatefulWidget {
   /// Creates a scrolling container that animates items when they are inserted or removed.
-  FirestoreAnimatedList({
+  FirestoreSliverAnimatedList({
     Key key,
     @required this.query,
     @required this.itemBuilder,
@@ -135,10 +129,12 @@ class FirestoreAnimatedList extends StatefulWidget {
   final Duration duration;
 
   @override
-  FirestoreAnimatedListState createState() => FirestoreAnimatedListState();
+  FirestoreSliverAnimatedListState createState() =>
+      FirestoreSliverAnimatedListState();
 }
 
-class FirestoreAnimatedListState extends State<FirestoreAnimatedList> {
+class FirestoreSliverAnimatedListState
+    extends State<FirestoreSliverAnimatedList> {
   final GlobalKey<SliverAnimatedListState> _animatedListKey =
       GlobalKey<SliverAnimatedListState>();
   FirestoreList _model;
@@ -212,8 +208,7 @@ class FirestoreAnimatedListState extends State<FirestoreAnimatedList> {
           _animatedListKey.currentState?.removeItem(
             index,
             (BuildContext context, Animation<double> animation) {
-              return widget.itemBuilder(
-                  context, snapshot, animation, index, _loaded);
+              return widget.itemBuilder(context, snapshot, animation, index);
             },
             duration: widget.duration,
           );
@@ -245,8 +240,7 @@ class FirestoreAnimatedListState extends State<FirestoreAnimatedList> {
 
   Widget _buildItem(
       BuildContext context, int index, Animation<double> animation) {
-    return widget.itemBuilder(
-        context, _model[index], animation, index, _loaded);
+    return widget.itemBuilder(context, _model[index], animation, index);
   }
 
   @override
